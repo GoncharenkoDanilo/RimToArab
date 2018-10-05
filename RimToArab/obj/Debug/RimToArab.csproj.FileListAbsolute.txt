@@ -1,0 +1,7 @@
+C:\Users\gonch\source\repos\RimToArab\RimToArab\bin\Debug\RimToArab.exe.config
+C:\Users\gonch\source\repos\RimToArab\RimToArab\bin\Debug\RimToArab.exe
+C:\Users\gonch\source\repos\RimToArab\RimToArab\bin\Debug\RimToArab.pdb
+C:\Users\gonch\source\repos\RimToArab\RimToArab\obj\Debug\RimToArab.csprojResolveAssemblyReference.cache
+C:\Users\gonch\source\repos\RimToArab\RimToArab\obj\Debug\RimToArab.csproj.CoreCompileInputs.cache
+C:\Users\gonch\source\repos\RimToArab\RimToArab\obj\Debug\RimToArab.exe
+C:\Users\gonch\source\repos\RimToArab\RimToArab\obj\Debug\RimToArab.pdb
