@@ -10,34 +10,55 @@ namespace RimToArab
     {
         static void Main(string[] args)
         {
-            string inStr = Console.ReadLine();
-            char[] rim1 = inStr.Split('+')[0].ToCharArray();
-            char[] rim2 = inStr.Split('+')[1].ToCharArray();
+            //for (int i=1; i<=2000; i++)
+            //{
+            //    string rim = parseToString(i);
+            //    int num2 = parseToInt(rim);
+            //    if (i != num2)
+            //    {
+            //        Console.WriteLine($"{i} == {rim} == {num2}");
+            //    }
+
+            //}
+
+            //Console.WriteLine("всё");
+
+            string[] rims = Console.ReadLine().Split('+');
+            List<int> nums = new List<int>();
+            foreach (string rim in rims)
+            {
+                if (rim != null && rim != "") nums.Add(parseToInt(rim));
+            }
+
+            int sum = nums.Sum();
+
+            Console.WriteLine($"{parseToString(sum)}");
+
+        }
+
+        public static int parseToInt(string rim)
+        {
+            int num = 0;
             List<int> arab1 = new List<int>();
             List<int> arab2 = new List<int>();
             int arabRes;
             bool flag = true;
 
-            foreach (char r in rim1)
-                arab1.Add(parseToInt(r));
-            foreach (char r in rim2)
-                arab2.Add(parseToInt(r));
+            foreach (char r in rim)
+                arab1.Add(parseToIntDanil(r));
+            //foreach (char r in rim2)
+            //    arab2.Add(parseToInt(r));
+
+
+            //Console.WriteLine(arab2.Sum());
 
             while (flag)
                 flag = test(arab1);
-            while (flag)
-                flag = test(arab2);
 
-            Console.WriteLine(arab1.Sum());
-            Console.WriteLine(arab2.Sum());
-
-            arabRes = arab1.Sum() + arab2.Sum();
-            Console.WriteLine(arabRes);
-
-            Console.ReadLine();
+            return arab1.Sum();
         }
 
-        public static int parseToInt(char rim)
+        public static int parseToIntDanil(char rim)
         {
             switch (rim)
             {
@@ -57,6 +78,51 @@ namespace RimToArab
                     return 1000;
                 default: return -1;
             }
+        }
+
+        struct Rim
+        {
+            public int dec;
+            public string rim;
+
+            public Rim(int dec, string rim)
+            {
+                this.dec = dec;
+                this.rim = rim;
+            }
+        }
+
+
+        public static string parseToString(int num)
+        {
+            string result = "";
+
+            List<Rim> mass = new List<Rim>();
+            mass.Add(new Rim(1000, "M"));
+            mass.Add(new Rim(900, "CM"));
+            mass.Add(new Rim(500, "D"));
+            mass.Add(new Rim(400, "CD"));
+            mass.Add(new Rim(100, "C"));
+            mass.Add(new Rim(90, "XC"));
+            mass.Add(new Rim(50, "L"));
+            mass.Add(new Rim(40, "XL"));
+            mass.Add(new Rim(10, "X"));
+            mass.Add(new Rim(9, "IX"));
+            mass.Add(new Rim(5, "V"));
+            mass.Add(new Rim(4, "IV"));
+            mass.Add(new Rim(1, "I"));
+
+            foreach (Rim iter in mass)
+            {
+                int count = num / iter.dec;
+                for (int i = 0; i< count; i++)
+                {
+                    result += iter.rim;
+                }
+                num -= (iter.dec * count); 
+            }
+
+            return result;
         }
 
         public static bool test(List<int> arab)

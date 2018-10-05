@@ -5,3 +5,10 @@ C:\Users\gonch\source\repos\RimToArab\RimToArab\obj\Debug\RimToArab.csprojResolv
 C:\Users\gonch\source\repos\RimToArab\RimToArab\obj\Debug\RimToArab.csproj.CoreCompileInputs.cache
 C:\Users\gonch\source\repos\RimToArab\RimToArab\obj\Debug\RimToArab.exe
 C:\Users\gonch\source\repos\RimToArab\RimToArab\obj\Debug\RimToArab.pdb
+C:\Users\IEEfimov\Desktop\RimToArab\RimToArab\obj\Debug\RimToArab.csprojAssemblyReference.cache
+C:\Users\IEEfimov\Desktop\RimToArab\RimToArab\obj\Debug\RimToArab.csproj.CoreCompileInputs.cache
+C:\Users\IEEfimov\Desktop\RimToArab\RimToArab\obj\Debug\RimToArab.exe
+C:\Users\IEEfimov\Desktop\RimToArab\RimToArab\obj\Debug\RimToArab.pdb
+C:\Users\IEEfimov\Desktop\RimToArab\RimToArab\bin\Debug\RimToArab.exe.config
+C:\Users\IEEfimov\Desktop\RimToArab\RimToArab\bin\Debug\RimToArab.exe
+C:\Users\IEEfimov\Desktop\RimToArab\RimToArab\bin\Debug\RimToArab.pdb
